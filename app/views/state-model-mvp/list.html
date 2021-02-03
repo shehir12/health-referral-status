@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Referrals
+      </h1>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Claimant Name</th>
+            <th scope="col" class="govuk-table__header">Preferred Name</th>
+            <th scope="col" class="govuk-table__header">NINO</th>
+            <th scope="col" class="govuk-table__header">Referral Date</th>
+            <th scope="col" class="govuk-table__header">SRTI</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag" id="Status 1">Status 1</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green" id="Status 2">Status 2</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue" id="Status 3">Status 3</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 4">Status 4</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red" id="Status 5">Status 5</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="claimant-detail" aria-describedby="claimant-detail">Sample Claimant</a></td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">RN000123A</td>
+            <td class="govuk-table__cell">01/02/2021</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow" id="Status 6">Status 6</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}

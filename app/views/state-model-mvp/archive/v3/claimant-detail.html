@@ -1,4 +1,4 @@
-{% extends "layout-key-details-assessment.html" %}
+{% extends "layout-key-details.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -15,7 +15,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">Referral information</h1>
-
+      
       <h2 class="govuk-heading-m">Personal details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -24,7 +24,7 @@
             Preferred name
           </dt>
           <dd class="govuk-summary-list__value">
-            Sam
+            N/A
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -41,6 +41,14 @@
           </dt>
           <dd class="govuk-summary-list__value">
             No
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            SRTI aware
+          </dt>
+          <dd class="govuk-summary-list__value">
+            N/A
           </dd>
         </div>
       </dl>
@@ -93,15 +101,8 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li>
-              <a href="#" aria-describedby="start-assessment">
-                <button class="govuk-button" data-module="govuk-button">
-                  Start assessment
-                </button>
-              </a>
-            </li>
-            <li>
               <a href="update-status" aria-describedby="update-status">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                <button class="govuk-button" data-module="govuk-button">
                   Update status
                 </button>
               </a>

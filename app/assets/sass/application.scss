@@ -52,44 +52,82 @@ $govuk-assets-path: '/govuk/assets/';
   }
 }
 
-// .dwp-timeline {
-//   border-left: 3px solid #005ea5;
-//   list-style-type: none;
-// }
+.dwp-timeline {
+  border-left: 3px solid #005ea5;
+  list-style-type: none;
+  padding: 0;
+}
 
-// .dwp-timeline__entry {
-//   margin: 2em 0;
-//   padding-left: 1em;
-//   position: relative;
-// }
+.dwp-timeline__entry {
+  margin: 2em 0;
+  padding-left: 1em;
+  position: relative;
+}
 
 
 
-// .dwp-timeline__entry::before {
-//   background-color: #005ea5;
-//   content: ' ';
-//   height: 3px;
-//   left: 0;
-//   position: absolute;
-//   top: .5em;
-//   width: 10px;
-// }
+.dwp-timeline__entry::before {
+  background-color: #005ea5;
+  content: ' ';
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: .5em;
+  width: 10px;
+}
 
-// .dwp-timeline__entry .dwp-timeline__title {
-//   display: block;
-//   font-weight: 700;
-// }
+.dwp-timeline__entry .dwp-timeline__title {
+  display: block;
+  font-weight: 700;
+}
 
-// .dwp-timeline__entry .dwp-timeline__author,
-// .dwp-timeline__entry .dwp-timeline__date {
-//   color: #6f777b;
-//   display: block;
-// }
+.dwp-timeline__entry .dwp-timeline__author,
+.dwp-timeline__entry .dwp-timeline__date {
+  color: #6f777b;
+  display: block;
+}
 
-// .dwp-timeline__entry .dwp-timeline__info {
-//   margin-top: 0;
-// }
+.dwp-timeline__entry .dwp-timeline__info {
+  margin-top: 0;
+}
 
-// .dwp-timeline__entry .dwp-timeline__body {
-//   display: block;
-// }
+.dwp-timeline__entry .dwp-timeline__body {
+  display: block;
+}
+
+
+//card css
+
+.dwp-card {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #d8dde0;
+  position: relative;
+  width: 100%;
+}
+
+.dwp-card__content {
+  padding: 24px;
+  position: relative;
+}
+
+.dwp-card--clickable {
+  border-bottom-width: 4px;
+}
+
+.dwp-card--clickable:hover {
+  border-color: #aeb7bd;
+}
+
+.dwp-card--clickable:hover, .dwp-card--clickable:active {
+  cursor: pointer;
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-card {
+    margin-bottom: 48px;
+}
+  .dwp-card__content {
+    padding: 32px;
+}
+}

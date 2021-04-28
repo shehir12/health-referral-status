@@ -12,6 +12,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form action="/finding-and-organising/archive/v2/status-filter" method="post" class="form">
       <h1 class="govuk-heading-l">
         Find or filter referrals
       </h1>
@@ -22,15 +23,9 @@
         </label>
         <input class="govuk-input" id="search-name" name="search-name" type="text">
       </div>
-      <a href="claimant-detail" aria-describedby="search-referral">
-        <button class="govuk-button" data-module="govuk-button">
-          Search
-        </button>
-      </a>
 
       <p>Or</p>
 
-      <form action="/finding-and-organising/archive/v1/status-filter" method="post" class="form">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -97,7 +92,7 @@
           </div>
         </fieldset>
       </div>
-      <button class="govuk-button" data-module="govuk-button">Filter</button>
+      <button class="govuk-button" data-module="govuk-button">Search</button>
     </form>
     </div>
   </div>

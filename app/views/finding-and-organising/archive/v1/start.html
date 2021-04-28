@@ -12,13 +12,25 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <form action="/finding-and-organising/v1/status-filter" method="post" class="form">
-
       <h1 class="govuk-heading-l">
-        Filter referrals
+        Find or filter referrals
       </h1>
 
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="search-name">
+          <strong>Search</strong>
+        </label>
+        <input class="govuk-input" id="search-name" name="search-name" type="text">
+      </div>
+      <a href="claimant-detail" aria-describedby="search-referral">
+        <button class="govuk-button" data-module="govuk-button">
+          Search
+        </button>
+      </a>
+
+      <p>Or</p>
+
+      <form action="/finding-and-organising/archive/v1/status-filter" method="post" class="form">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">

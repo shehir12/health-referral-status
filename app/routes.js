@@ -35,6 +35,7 @@ router.post('/finding-and-organising/archive/v1/status-filter', function (req, r
 router.post('/finding-and-organising/v1/status-filter', function (req, res) {
   
     const status = req.session.data['status']
+    req.session.data['status']=''
   
     if (status === 'unassigned') {
       res.redirect('/finding-and-organising/v1/unassigned-list')

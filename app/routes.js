@@ -4,7 +4,7 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 // Branching
-router.post('finding-and-organising/v1/error', function (req, res) {
+router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
@@ -12,12 +12,11 @@ router.post('finding-and-organising/v1/error', function (req, res) {
     const status = req.session.data['status']
   
     if (status === 'unassigned') {
-      res.redirect('/views/finding-and-organising/v1/unassigned-list')
-    }
-    if (status === 'in-review') {
-        res.redirect('/views/finding-and-organising/v1/unassigned-list')
+      res.redirect('/finding-and-organising/v1/unassigned-list')
+    } else if (status === 'in-review') {
+        res.redirect('/finding-and-organising/v1/unassigned-list')
     } else {
-      res.redirect('/views/finding-and-organising/v1/error')
+      res.redirect('/finding-and-organising/v1/error')
     }
   })
 

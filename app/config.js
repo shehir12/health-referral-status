@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Referral State Model',
+  serviceName: 'Team Chaffinch prototypes',
 
   // Default port that prototype runs on
   port: '3000',

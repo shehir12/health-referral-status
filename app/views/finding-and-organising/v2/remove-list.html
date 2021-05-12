@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/finding-and-organising/v1/status-filter" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Remove referral from a list
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            remove this referral from a particular list
+          </div>
+          <div class="govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status" name="status" type="radio" value="unassigned">
+              <label class="govuk-label govuk-radios__label" for="status">
+                List 1 (12)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="in-review">
+              <label class="govuk-label govuk-radios__label" for="status-2">
+                List 2 (32)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-3" name="status" type="radio" value="gathering-information">
+              <label class="govuk-label govuk-radios__label" for="status-3">
+                List 3 (8)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-4" name="status" type="radio" value="awaiting-evidence">
+              <label class="govuk-label govuk-radios__label" for="status-4">
+                List 4 (15)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-5" name="status" type="radio" value="paper-based-review">
+              <label class="govuk-label govuk-radios__label" for="status-5">
+                List 5 (6)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-6" name="status" type="radio" value="assessment-booked">
+              <label class="govuk-label govuk-radios__label" for="status-6">
+                List 6 (11)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Add and continue</button>
+    </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

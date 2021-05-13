@@ -161,10 +161,22 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     const status2 = req.session.data['status2']
     req.session.data['status2']=''
   
-    if (status2 === 'unassigned') {
+    if (status2 === 'list-1') {
+      res.redirect('/finding-and-organising/v3/list-1')
+    } else if (status2 === 'list-2') {
+        res.redirect('/finding-and-organising/v3/list-2')
+    } else if (status2 === 'list-3') {
+      res.redirect('/finding-and-organising/v3/list-3')
+    } else if (status2 === 'list-4') {
+      res.redirect('/finding-and-organising/v3/list-4')
+    } else if (status2 === 'list-5') {
+      res.redirect('/finding-and-organising/v3/list-5')
+    } else if (status2 === 'list-6') {
+      res.redirect('/finding-and-organising/v3/list-6')
+    } else if (status2 === 'unassigned') {
       res.redirect('/finding-and-organising/v3/unassigned-list')
     } else if (status2 === 'in-review') {
-        res.redirect('/finding-and-organising/v3/review-list')
+      res.redirect('/finding-and-organising/v3/review-list')
     } else if (status2 === 'gathering-information') {
       res.redirect('/finding-and-organising/v3/information-list')
     } else if (status2 === 'awaiting-evidence') {

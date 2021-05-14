@@ -60,6 +60,34 @@ router.post('/finding-and-organising/archive/v2/status-filter', function (req, r
   }
 })
 
+router.post('/finding-and-organising/archive/usertesting1/status-filter', function (req, res) {
+  
+  const status = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status === 'unassigned') {
+    res.redirect('/finding-and-organising/archive/usertesting1/unassigned-list')
+  } else if (status === 'in-review') {
+      res.redirect('/finding-and-organising/archive/usertesting1/review-list')
+  } else if (status === 'gathering-information') {
+    res.redirect('/finding-and-organising/archive/usertesting1/information-list')
+  } else if (status === 'awaiting-evidence') {
+    res.redirect('/finding-and-organising/archive/usertesting1/evidence-list')
+  } else if (status === 'paper-based-review') {
+    res.redirect('/finding-and-organising/archive/usertesting1/paperbased-list')
+  } else if (status === 'assessment-booked') {
+    res.redirect('/finding-and-organising/archive/usertesting1/assessment-list')
+  } else if (status === 'awaiting-decision') {
+    res.redirect('/finding-and-organising/archive/usertesting1/decision-list')
+  } else if (status === 'done') {
+    res.redirect('/finding-and-organising/archive/usertesting1/done-list')
+  } else if (status === 'withdrawn') {
+    res.redirect('/finding-and-organising/archive/usertesting1/withdrawn-list')
+  } else {
+    res.redirect('/finding-and-organising/archive/usertesting1/error')
+  }
+})
+
 // Branching v1
 router.post('/finding-and-organising/v1/status-filter', function (req, res) {
   

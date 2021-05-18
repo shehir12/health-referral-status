@@ -117,71 +117,6 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     }
   })
 
-// Branching v2
-  router.post('/finding-and-organising/v2/status-filter2', function (req, res) {
-  
-    const status2 = req.session.data['status2']
-    req.session.data['status2']=''
-  
-    if (status2 === 'unassigned') {
-      res.redirect('/finding-and-organising/v2/unassigned-list')
-    } else if (status2 === 'in-review') {
-        res.redirect('/finding-and-organising/v2/review-list')
-    } else if (status2 === 'gathering-information') {
-      res.redirect('/finding-and-organising/v2/information-list')
-    } else if (status2 === 'awaiting-evidence') {
-      res.redirect('/finding-and-organising/v2/evidence-list')
-    } else if (status2 === 'paper-based-review') {
-      res.redirect('/finding-and-organising/v2/paperbased-list')
-    } else if (status2 === 'assessment-booked') {
-      res.redirect('/finding-and-organising/v2/assessment-list')
-    } else if (status2 === 'awaiting-decision') {
-      res.redirect('/finding-and-organising/v2/decision-list')
-    } else if (status2 === 'done') {
-      res.redirect('/finding-and-organising/v2/done-list')
-    } else if (status2 === 'withdrawn') {
-      res.redirect('/finding-and-organising/v2/withdrawn-list')
-    } else {
-      res.redirect('/finding-and-organising/v2/error')
-    }
-  })
-
-  router.post('/finding-and-organising/v2/assign-list', function (req, res) {
-  
-    const list = req.session.data['list']
-    req.session.data['list']=''
-  
-    if (list === 'list1') {
-      res.redirect('/finding-and-organising/v2/confirmation-list1')
-    } else if (list === 'list2') {
-      res.redirect('/finding-and-organising/v2/confirmation-list2')
-    } else if (list === 'list3') {
-      res.redirect('/finding-and-organising/v2/confirmation-list3')
-    } else if (list === 'list4') {
-      res.redirect('/finding-and-organising/v2/confirmation-list4')
-    } else if (list === 'list5') {
-      res.redirect('/finding-and-organising/v2/confirmation-list5')
-    } else if (list === 'list6') {
-      res.redirect('/finding-and-organising/v2/confirmation-list6')
-    } else if (list === 'new-list') {
-      res.redirect('/finding-and-organising/v2/new-list')
-    } else {
-      res.redirect('/finding-and-organising/v2/error-list')
-    }
-  })
-
-  router.post('/finding-and-organising/v2/add-to-list', function (req, res) {
-  
-    const addToList = req.session.data['add-to-list']
-    req.session.data['add-to-list']=''
-  
-    if (addToList === 'yes') {
-      res.redirect('/finding-and-organising/v2/confirmation-list-assigned')
-    } else {
-      res.redirect('/finding-and-organising/v2/confirmation-list')
-    }
-  })
-
   //Branching v3
 
   router.post('/finding-and-organising/v3/status-filter2', function (req, res) {
@@ -338,5 +273,70 @@ router.post('/finding-and-organising/bluesky/v1/remove-list', function (req, res
     res.redirect('/finding-and-organising/bluesky/v1/confirmation-list-removed')
   } else {
     res.redirect('/finding-and-organising/bluesky/v1/claimant-detail')
+  }
+})
+
+// V2
+router.post('/finding-and-organising/bluesky/v2/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'unassigned') {
+    res.redirect('/finding-and-organising/bluesky/v2/unassigned-list')
+  } else if (status2 === 'in-review') {
+      res.redirect('/finding-and-organising/bluesky/v2/review-list')
+  } else if (status2 === 'gathering-information') {
+    res.redirect('/finding-and-organising/bluesky/v2/information-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/finding-and-organising/bluesky/v2/evidence-list')
+  } else if (status2 === 'paper-based-review') {
+    res.redirect('/finding-and-organising/bluesky/v2/paperbased-list')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/finding-and-organising/bluesky/v2/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/finding-and-organising/bluesky/v2/decision-list')
+  } else if (status2 === 'done') {
+    res.redirect('/finding-and-organising/bluesky/v2/done-list')
+  } else if (status2 === 'withdrawn') {
+    res.redirect('/finding-and-organising/bluesky/v2/withdrawn-list')
+  } else {
+    res.redirect('/finding-and-organising/bluesky/v2/error')
+  }
+})
+
+router.post('/finding-and-organising/bluesky/v2/assign-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list3')
+  } else if (list === 'list4') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list4')
+  } else if (list === 'list5') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list5')
+  } else if (list === 'list6') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list6')
+  } else if (list === 'new-list') {
+    res.redirect('/finding-and-organising/bluesky/v2/new-list')
+  } else {
+    res.redirect('/finding-and-organising/bluesky/v2/error-list')
+  }
+})
+
+router.post('/finding-and-organising/bluesky/v2/add-to-list', function (req, res) {
+
+  const addToList = req.session.data['add-to-list']
+  req.session.data['add-to-list']=''
+
+  if (addToList === 'yes') {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list-assigned')
+  } else {
+    res.redirect('/finding-and-organising/bluesky/v2/confirmation-list')
   }
 })

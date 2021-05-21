@@ -6,22 +6,19 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">'list name' created</h1>
-      </div>
-
-        <br>
-              <h2 class="govuk-heading-m">What to do next</h2>
-
-              <p class="govuk-body">
-            You now need to assign the referral to the new list.
-              </p>
-              <a href="claimant-detail" aria-describedby="add-to-list">
-              <button class="govuk-button" data-module="govuk-button">Continue to referral</button>
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">New list 'list name here' created and referral assigned</h1>
     </div>
+
+    <p>
+      <a href="claimant-detail-assigned" aria-describedby="claimant-detail">Go back to referral</a>
+    </p>
+
+
   </div>
+</div>
 
 {% endblock %}

@@ -226,10 +226,6 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
       res.redirect('/finding-and-organising/v2/assessment-list')
     } else if (status2 === 'awaiting-decision') {
       res.redirect('/finding-and-organising/v2/decision-list')
-    } else if (status2 === 'done') {
-      res.redirect('/finding-and-organising/v2/done-list')
-    } else if (status2 === 'withdrawn') {
-      res.redirect('/finding-and-organising/v2/withdrawn-list')
     } else {
       res.redirect('/finding-and-organising/v2/error')
     }

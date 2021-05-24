@@ -12,30 +12,26 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">Find a claimant</span>
-      <h1 class="govuk-heading-l">
-        What is the claimant's National Insurance number?
-      </h1>
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What do you want to name this list?
+        </h1>
+      </legend>
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="search-name">
           <div id="email-hint" class="govuk-hint">
-    For example, ‘QQ 12 34 56 C’
-  </div>
+            This new list should have a different name to any existing lists
+          </div>
         </label>
         <input class="govuk-input" id="search-name" name="search-name" type="text">
       </div>
-      <a href="claimant-detail" aria-describedby="search-referral">
+      <a href="confirmation-list-assigned" aria-describedby="add-to-list">
         <button class="govuk-button" data-module="govuk-button">
-          Search
+          Create list
         </button>
       </a>
-
-      <div>
-        <a href="alternative-find" aria-describedby="search-referral">
-          Alternative result
-        </a>
-      </div>
 
     </div>
   </div>

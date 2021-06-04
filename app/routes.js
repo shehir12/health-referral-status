@@ -251,15 +251,39 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     }
   })
 
+  router.post('/finding-and-organising/v2/assign-list-review', function (req, res) {
+  
+    const list = req.session.data['list']
+    req.session.data['list']=''
+  
+    if (list === 'list1') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'list2') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'list3') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'list4') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'list5') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'list6') {
+      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+    } else if (list === 'new-list') {
+      res.redirect('/finding-and-organising/v2/new-list-review')
+    } else {
+      res.redirect('/finding-and-organising/v2/error-list')
+    }
+  })
+
   router.post('/finding-and-organising/v2/remove-list', function (req, res) {
   
     const removeList = req.session.data['remove-list']
     req.session.data['remove-list']=''
   
     if (removeList === 'yes') {
-      res.redirect('/finding-and-organising/v2/confirmation-list-removed')
+      res.redirect('/finding-and-organising/v2/assign-list-review')
     } else {
-      res.redirect('/finding-and-organising/v2/claimant-detail')
+      res.redirect('/finding-and-organising/v2/claimant-detail-assigned')
     }
   })
 

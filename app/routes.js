@@ -281,9 +281,21 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     req.session.data['remove-list']=''
   
     if (removeList === 'yes') {
-      res.redirect('/finding-and-organising/v2/assign-list-review')
+      res.redirect('/finding-and-organising/v2/assign-list')
     } else {
       res.redirect('/finding-and-organising/v2/claimant-detail-assigned')
+    }
+  })
+
+  router.post('/finding-and-organising/v2/remove-list-review', function (req, res) {
+  
+    const removeList = req.session.data['remove-list']
+    req.session.data['remove-list']=''
+  
+    if (removeList === 'yes') {
+      res.redirect('/finding-and-organising/v2/assign-list-review')
+    } else {
+      res.redirect('/finding-and-organising/v2/claimant-detail-review')
     }
   })
 

@@ -373,8 +373,6 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     }
   })
 
-module.exports = router
-
 //Branching bluesky
 
 //V1
@@ -518,3 +516,82 @@ router.post('/finding-and-organising/bluesky/v2/add-to-list', function (req, res
     res.redirect('/finding-and-organising/bluesky/v2/confirmation-list')
   }
 })
+
+
+//Branching Claimant Case
+
+router.post('/claimant-case/v1/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/claimant-case/v1/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/claimant-case/v1/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/claimant-case/v1/list-3')
+  } else if (status2 === 'list-4') {
+    res.redirect('/claimant-case/v1/list-4')
+  } else if (status2 === 'list-5') {
+    res.redirect('/claimant-case/v1/list-5')
+  } else if (status2 === 'list-6') {
+    res.redirect('/claimant-case/v1/list-6')
+  } else if (status2 === 'unassigned') {
+    res.redirect('/claimant-case/v1/unassigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/claimant-case/v1/review-list')
+  } else if (status2 === 'gathering-information') {
+    res.redirect('/claimant-case/v1/information-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/claimant-case/v1/evidence-list')
+  } else if (status2 === 'paper-based-review') {
+    res.redirect('/claimant-case/v1/paperbased-list')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/claimant-case/v1/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/claimant-case/v1/decision-list')
+  } else {
+    res.redirect('/claimant-case/v1/error')
+  }
+})
+
+router.post('/claimant-case/v1/assign-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/claimant-case/v1/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/claimant-case/v1/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/claimant-case/v1/confirmation-list3')
+  } else if (list === 'list4') {
+    res.redirect('/claimant-case/v1/confirmation-list4')
+  } else if (list === 'list5') {
+    res.redirect('/claimant-case/v1/confirmation-list5')
+  } else if (list === 'list6') {
+    res.redirect('/claimant-case/v1/confirmation-list6')
+  } else if (list === 'new-list') {
+    res.redirect('/claimant-case/v1/new-list')
+  } else {
+    res.redirect('/claimant-case/v1/error-list')
+  }
+})
+
+router.post('/claimant-case/v1/remove-list', function (req, res) {
+
+  const removeList = req.session.data['remove-list']
+  req.session.data['remove-list']=''
+
+  if (removeList === 'yes') {
+    res.redirect('/claimant-case/v1/confirmation-list-removed')
+  } else {
+    res.redirect('/claimant-case/v1/claimant-detail')
+  }
+})
+
+
+
+module.exports = router

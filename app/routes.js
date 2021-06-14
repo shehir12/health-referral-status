@@ -520,6 +520,7 @@ router.post('/finding-and-organising/bluesky/v2/add-to-list', function (req, res
 
 //Branching Claimant Case
 
+//V1
 router.post('/claimant-case/v1/status-filter2', function (req, res) {
   
   const status2 = req.session.data['status2']
@@ -533,10 +534,6 @@ router.post('/claimant-case/v1/status-filter2', function (req, res) {
     res.redirect('/claimant-case/v1/list-3')
   } else if (status2 === 'list-4') {
     res.redirect('/claimant-case/v1/list-4')
-  } else if (status2 === 'list-5') {
-    res.redirect('/claimant-case/v1/list-5')
-  } else if (status2 === 'list-6') {
-    res.redirect('/claimant-case/v1/list-6')
   } else if (status2 === 'unassigned') {
     res.redirect('/claimant-case/v1/unassigned-list')
   } else if (status2 === 'in-review') {
@@ -569,10 +566,6 @@ router.post('/claimant-case/v1/assign-list', function (req, res) {
     res.redirect('/claimant-case/v1/confirmation-list3')
   } else if (list === 'list4') {
     res.redirect('/claimant-case/v1/confirmation-list4')
-  } else if (list === 'list5') {
-    res.redirect('/claimant-case/v1/confirmation-list5')
-  } else if (list === 'list6') {
-    res.redirect('/claimant-case/v1/confirmation-list6')
   } else if (list === 'new-list') {
     res.redirect('/claimant-case/v1/new-list')
   } else {

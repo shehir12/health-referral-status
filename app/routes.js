@@ -531,10 +531,6 @@ router.post('/finding-and-organising/bluesky/v3/status-filter2', function (req, 
     res.redirect('/finding-and-organising/bluesky/v3/list-3')
   } else if (status2 === 'list-4') {
     res.redirect('/finding-and-organising/bluesky/v3/list-4')
-  } else if (status2 === 'list-5') {
-    res.redirect('/finding-and-organising/bluesky/v3/list-5')
-  } else if (status2 === 'list-6') {
-    res.redirect('/finding-and-organising/bluesky/v3/list-6')
   } else if (status2 === 'unassigned') {
     res.redirect('/finding-and-organising/bluesky/v3/unassigned-list')
   } else if (status2 === 'in-review') {
@@ -549,10 +545,6 @@ router.post('/finding-and-organising/bluesky/v3/status-filter2', function (req, 
     res.redirect('/finding-and-organising/bluesky/v3/assessment-list')
   } else if (status2 === 'awaiting-decision') {
     res.redirect('/finding-and-organising/bluesky/v3/decision-list')
-  } else if (status2 === 'done') {
-    res.redirect('/finding-and-organising/bluesky/v3/done-list')
-  } else if (status2 === 'withdrawn') {
-    res.redirect('/finding-and-organising/bluesky/v3/withdrawn-list')
   } else {
     res.redirect('/finding-and-organising/bluesky/v3/error')
   }
@@ -571,10 +563,6 @@ router.post('/finding-and-organising/bluesky/v3/assign-list', function (req, res
     res.redirect('/finding-and-organising/bluesky/v3/confirmation-list3')
   } else if (list === 'list4') {
     res.redirect('/finding-and-organising/bluesky/v3/confirmation-list4')
-  } else if (list === 'list5') {
-    res.redirect('/finding-and-organising/bluesky/v3/confirmation-list5')
-  } else if (list === 'list6') {
-    res.redirect('/finding-and-organising/bluesky/v3/confirmation-list6')
   } else if (list === 'new-list') {
     res.redirect('/finding-and-organising/bluesky/v3/new-list')
   } else {

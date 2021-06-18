@@ -582,6 +582,17 @@ router.post('/finding-and-organising/bluesky/v3/remove-list', function (req, res
   }
 })
 
+router.post('/finding-and-organising/bluesky/v3/location', function (req, res) {
+  const removeList = req.session.data['location']
+  req.session.data['location']=''
+
+  if (removeList === 'tresco') {
+    res.redirect('/finding-and-organising/bluesky/v3/landing-page')
+  } else {
+    res.redirect('#')
+  }
+})
+
 //Branching Claimant Case
 
 //V1

@@ -15,106 +15,131 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="confirmation" method="post">
+
+    <form action="/finding-and-organising/v3/status-filter2" method="post" class="form">
+
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+        <fieldset class="govuk-fieldset" aria-describedby="status-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l govuk-!-margin-bottom-2">Update status</span>
             <h1 class="govuk-fieldset__heading">
               Which status do you want to move the referral to?
             </h1>
           </legend>
-          <div class="govuk-radios">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Unassigned</strong>
+              <input class="govuk-radios__input" id="status" name="status" type="radio" value="unassigned" data-aria-controls="conditional-status">
+              <label class="govuk-label govuk-radios__label" for="status">
+                Unassigned (12)
               </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Referral needs a case manager assigned before it can be progressed.
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="gathering-information" data-aria-controls="conditional-status">
+              <label class="govuk-label govuk-radios__label" for="status-2">
+                Gathering information (12)
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-status">
+              <div class="govuk-form-group">
+                <div class="govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-1" name="status2" type="radio" value="status-option-1">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-1">
+                      Option here (3)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-2" name="status2" type="radio" value="status-option-2">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-2">
+                      Option here (3)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-3" name="status2" type="radio" value="status-option-3">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-3">
+                      Option here (3)
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-          <div class="govuk-radios">
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Gathering information</strong>
+              <input class="govuk-radios__input" id="status-3" name="status" type="radio" value="in-review" data-aria-controls="conditional-status-2">
+              <label class="govuk-label govuk-radios__label" for="status-3">
+                In review (9)
               </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Referral needs supporting information from the claimant.
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-status-2">
+              <div class="govuk-form-group">
+                <div class="govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-4" name="status2" type="radio" value="casemanager-review">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-4">
+                      Case manager review (9)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-5" name="status2" type="radio" value="hcp-review">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-5">
+                      HCP review (3)
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
+
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>In review</strong>
+              <input class="govuk-radios__input" id="status-4" name="status" type="radio" value="awaiting-evidence" data-aria-controls="conditional-status-3">
+              <label class="govuk-label govuk-radios__label" for="status-4">
+                Awaiting evidence (9)
               </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Referral is being reviewed by a case manager.
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-status-3">
+              <div class="govuk-form-group">
+                <div class="govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-6" name="status2" type="radio" value="claimant-evidence">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-6">
+                      Claimant evidence (4)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sub-status-7" name="status2" type="radio" value="hcp-evidence">
+                    <label class="govuk-label govuk-radios__label" for="sub-status-7">
+                      External HCP evidence (5)
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Awaiting evidence</strong>
+              <input class="govuk-radios__input" id="status-6" name="status" type="radio" value="assessment-booked" data-aria-controls="conditional-status-6">
+              <label class="govuk-label govuk-radios__label" for="status-6">
+                Assessment booked (3)
               </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Further information is needed from a professional who knows about the claimant's condition.
-              </div>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Paper based review</strong>
+              <input class="govuk-radios__input" id="status-7" name="status" type="radio" value="awaiting-decision" data-aria-controls="conditional-status-7">
+              <label class="govuk-label govuk-radios__label" for="status-7">
+                Awaiting decision (3)
               </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                A paper based review is needed before a decision can be made.
-              </div>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Assessment booked</strong>
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                An assessment with the claimant has been booked.
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Awaiting decision</strong>
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Enough evidence is available for a decision to be made.
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Done</strong>
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                A decision has been made and communicated to the claimant.
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                <strong>Withdrawn</strong>
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Claimant has requested that the referral be withdrawn.
-              </div>
-            </div>
+
+            
+
           </div>
 
         </fieldset>
       </div>
 
-      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-
-    </form>
+    <button class="govuk-button" data-module="govuk-button">Filter</button>
+  </form>
 
   </div>
 </div>

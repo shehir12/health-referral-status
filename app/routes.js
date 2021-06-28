@@ -486,31 +486,31 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
   })
 
   //V4
-  router.post('/finding-and-organising/v2/status-filter2', function (req, res) {
+  router.post('/finding-and-organising/v4/status-filter2', function (req, res) {
   
     const status2 = req.session.data['status2']
     req.session.data['status2']=''
   
     if (status2 === 'list-1') {
-      res.redirect('/finding-and-organising/v2/list-1')
+      res.redirect('/finding-and-organising/v4/list-1')
     } else if (status2 === 'list-2') {
-        res.redirect('/finding-and-organising/v2/list-2')
+        res.redirect('/finding-and-organising/v4/list-2')
     } else if (status2 === 'list-3') {
-      res.redirect('/finding-and-organising/v2/list-3')
+      res.redirect('/finding-and-organising/v4/list-3')
     } else if (status2 === 'in-review') {
-      res.redirect('/finding-and-organising/v2/review-list')
+      res.redirect('/finding-and-organising/v4/review-list')
     } else if (status2 === 'gathering-information') {
-      res.redirect('/finding-and-organising/v2/information-list')
+      res.redirect('/finding-and-organising/v4/information-list')
     } else if (status2 === 'awaiting-evidence') {
-      res.redirect('/finding-and-organising/v2/evidence-list')
+      res.redirect('/finding-and-organising/v4/evidence-list')
     } else if (status2 === 'paper-based-review') {
-      res.redirect('/finding-and-organising/v2/paperbased-list')
+      res.redirect('/finding-and-organising/v4/paperbased-list')
     } else if (status2 === 'assessment-booked') {
-      res.redirect('/finding-and-organising/v2/assessment-list')
+      res.redirect('/finding-and-organising/v4/assessment-list')
     } else if (status2 === 'awaiting-decision') {
-      res.redirect('/finding-and-organising/v2/decision-list')
+      res.redirect('/finding-and-organising/v4/decision-list')
     } else {
-      res.redirect('/finding-and-organising/v2/error')
+      res.redirect('/finding-and-organising/v4/error')
     }
   })
 

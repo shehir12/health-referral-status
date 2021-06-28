@@ -525,28 +525,10 @@ router.post('/finding-and-organising/v4/assign-list', function (req, res) {
     res.redirect('/finding-and-organising/v4/confirmation-list2')
   } else if (list === 'list3') {
     res.redirect('/finding-and-organising/v4/confirmation-list3')
-  } else if (list === 'list4') {
-    res.redirect('/finding-and-organising/v4/confirmation-list4')
-  } else if (list === 'list5') {
-    res.redirect('/finding-and-organising/v4/confirmation-list5')
-  } else if (list === 'list6') {
-    res.redirect('/finding-and-organising/v4/confirmation-list6')
   } else if (list === 'new-list') {
     res.redirect('/finding-and-organising/v4/new-list')
   } else {
     res.redirect('/finding-and-organising/v4/error-list')
-  }
-})
-
-router.post('/finding-and-organising/v4/remove-list', function (req, res) {
-
-  const removeList = req.session.data['remove-list']
-  req.session.data['remove-list']=''
-
-  if (removeList === 'yes') {
-    res.redirect('/finding-and-organising/v4/confirmation-list-removed')
-  } else {
-    res.redirect('/finding-and-organising/v4/claimant-detail')
   }
 })
 

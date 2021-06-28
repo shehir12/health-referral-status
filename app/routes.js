@@ -485,46 +485,42 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
     }
   })
 
-  //V1
-router.post('/finding-and-organising/v4/status-filter2', function (req, res) {
+  //V4
+  router.post('/finding-and-organising/v2/status-filter2', function (req, res) {
   
-  const status2 = req.session.data['status2']
-  req.session.data['status2']=''
-
-  if (status2 === 'list-1') {
-    res.redirect('/finding-and-organising/v4/list-1')
-  } else if (status2 === 'list-2') {
-      res.redirect('/finding-and-organising/v4/list-2')
-  } else if (status2 === 'list-3') {
-    res.redirect('/finding-and-organising/v4/list-3')
-  } else if (status2 === 'list-4') {
-    res.redirect('/finding-and-organising/v4/list-4')
-  } else if (status2 === 'list-5') {
-    res.redirect('/finding-and-organising/v4/list-5')
-  } else if (status2 === 'list-6') {
-    res.redirect('/finding-and-organising/v4/list-6')
-  } else if (status2 === 'unassigned') {
-    res.redirect('/finding-and-organising/v4/unassigned-list')
-  } else if (status2 === 'in-review') {
-    res.redirect('/finding-and-organising/v4/review-list')
-  } else if (status2 === 'gathering-information') {
-    res.redirect('/finding-and-organising/v4/information-list')
-  } else if (status2 === 'awaiting-evidence') {
-    res.redirect('/finding-and-organising/v4/evidence-list')
-  } else if (status2 === 'paper-based-review') {
-    res.redirect('/finding-and-organising/v4/paperbased-list')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/finding-and-organising/v4/assessment-list')
-  } else if (status2 === 'awaiting-decision') {
-    res.redirect('/finding-and-organising/v4/decision-list')
-  } else if (status2 === 'done') {
-    res.redirect('/finding-and-organising/v4/done-list')
-  } else if (status2 === 'withdrawn') {
-    res.redirect('/finding-and-organising/v4/withdrawn-list')
-  } else {
-    res.redirect('/finding-and-organising/v4/error')
-  }
-})
+    const status2 = req.session.data['status2']
+    req.session.data['status2']=''
+  
+    if (status2 === 'list-1') {
+      res.redirect('/finding-and-organising/v2/list-1')
+    } else if (status2 === 'list-2') {
+        res.redirect('/finding-and-organising/v2/list-2')
+    } else if (status2 === 'list-3') {
+      res.redirect('/finding-and-organising/v2/list-3')
+    } else if (status2 === 'list-4') {
+      res.redirect('/finding-and-organising/v2/list-4')
+    } else if (status2 === 'list-5') {
+      res.redirect('/finding-and-organising/v2/list-5')
+    } else if (status2 === 'list-6') {
+      res.redirect('/finding-and-organising/v2/list-6')
+    } else if (status2 === 'unassigned') {
+      res.redirect('/finding-and-organising/v2/unassigned-list')
+    } else if (status2 === 'in-review') {
+      res.redirect('/finding-and-organising/v2/review-list')
+    } else if (status2 === 'gathering-information') {
+      res.redirect('/finding-and-organising/v2/information-list')
+    } else if (status2 === 'awaiting-evidence') {
+      res.redirect('/finding-and-organising/v2/evidence-list')
+    } else if (status2 === 'paper-based-review') {
+      res.redirect('/finding-and-organising/v2/paperbased-list')
+    } else if (status2 === 'assessment-booked') {
+      res.redirect('/finding-and-organising/v2/assessment-list')
+    } else if (status2 === 'awaiting-decision') {
+      res.redirect('/finding-and-organising/v2/decision-list')
+    } else {
+      res.redirect('/finding-and-organising/v2/error')
+    }
+  })
 
 router.post('/finding-and-organising/v4/assign-list', function (req, res) {
 

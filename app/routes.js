@@ -497,14 +497,6 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
         res.redirect('/finding-and-organising/v2/list-2')
     } else if (status2 === 'list-3') {
       res.redirect('/finding-and-organising/v2/list-3')
-    } else if (status2 === 'list-4') {
-      res.redirect('/finding-and-organising/v2/list-4')
-    } else if (status2 === 'list-5') {
-      res.redirect('/finding-and-organising/v2/list-5')
-    } else if (status2 === 'list-6') {
-      res.redirect('/finding-and-organising/v2/list-6')
-    } else if (status2 === 'unassigned') {
-      res.redirect('/finding-and-organising/v2/unassigned-list')
     } else if (status2 === 'in-review') {
       res.redirect('/finding-and-organising/v2/review-list')
     } else if (status2 === 'gathering-information') {

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="claimant-detail" class="govuk-back-link">Back</a>
+<a href="claimant-detail-review" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Which caseload do you want to assign this referral to?
+              Which caseload do you want to move this referral to?
             </h1>
           </legend>
           <div id="waste-hint" class="govuk-hint">
@@ -48,7 +48,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-list" name="list" type="radio" value="new-list">
               <label class="govuk-label govuk-radios__label" for="new-list">
-                Create a new list
+                Create a new caseload
               </label>
             </div>
           </div>

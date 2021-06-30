@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
+<a href="assign-list" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,21 +15,16 @@
 
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          Create a new caseload
+          What do you want to name this caseload?
         </h1>
       </legend>
 
       <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="search-name">
-          <div id="email-hint" class="govuk-hint">
-            E
-          </div>
-        </label>
         <input class="govuk-input" id="search-name" name="search-name" type="text">
       </div>
       <a href="confirmation-list-assigned" aria-describedby="add-to-list">
         <button class="govuk-button" data-module="govuk-button">
-          Next
+          Create caseload
         </button>
       </a>
 

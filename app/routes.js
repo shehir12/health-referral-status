@@ -597,6 +597,24 @@ router.post('/finding-and-organising/v4/assign-list', function (req, res) {
   }
 })
 
+router.post('/finding-and-organising/v4/assign-list-review', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/finding-and-organising/v4/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/finding-and-organising/v4/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/finding-and-organising/v4/confirmation-list3')
+  } else if (list === 'new-list') {
+    res.redirect('/finding-and-organising/v4/new-list')
+  } else {
+    res.redirect('/finding-and-organising/v4/error-list')
+  }
+})
+
 router.post('/finding-and-organising/v4/unassigned-list', function (req, res) {
 
   const list = req.session.data['list']

@@ -274,6 +274,71 @@ router.post('/finding-and-organising/archive/usertesting2/remove-list-review', f
   }
 })
 
+  //V4
+  router.post('/finding-and-organising/archive/ustertesting3/status-filter2', function (req, res) {
+  
+    const status2 = req.session.data['status2']
+    req.session.data['status2']=''
+  
+    if (status2 === 'list-1') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/list-1')
+    } else if (status2 === 'list-2') {
+        res.redirect('/finding-and-organising/archive/ustertesting3/list-2')
+    } else if (status2 === 'list-3') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/list-3')
+    } else if (status2 === 'in-review') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/review-list')
+    } else if (status2 === 'gathering-information') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/information-list')
+    } else if (status2 === 'awaiting-evidence') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/evidence-list')
+    } else if (status2 === 'paper-based-review') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/paperbased-list')
+    } else if (status2 === 'assessment-booked') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/assessment-list')
+    } else if (status2 === 'awaiting-decision') {
+      res.redirect('/finding-and-organising/archive/ustertesting3/decision-list')
+    } else {
+      res.redirect('/finding-and-organising/archive/ustertesting3/error')
+    }
+  })
+
+router.post('/finding-and-organising/archive/ustertesting3/assign-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list3')
+  } else if (list === 'new-list') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/new-list')
+  } else {
+    res.redirect('/finding-and-organising/archive/ustertesting3/error-list')
+  }
+})
+
+router.post('/finding-and-organising/archive/ustertesting3/unassigned-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list-jared')
+  } else if (list === 'list2') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list-zoe')
+  } else if (list === 'list3') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/confirmation-list-akhtar')
+  } else if (list === 'new-list') {
+    res.redirect('/finding-and-organising/archive/ustertesting3/new-list')
+  } else {
+    res.redirect('/finding-and-organising/archive/ustertesting3/error-list')
+  }
+})
+
 //End of archive
 
 // Branching v1

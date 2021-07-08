@@ -562,6 +562,8 @@ router.post('/finding-and-organising/v1/status-filter', function (req, res) {
         res.redirect('/finding-and-organising/v4/list-2')
     } else if (status2 === 'list-3') {
       res.redirect('/finding-and-organising/v4/list-3')
+    } else if (status2 === 'assigned') {
+      res.redirect('/finding-and-organising/v4/assigned-list')
     } else if (status2 === 'in-review') {
       res.redirect('/finding-and-organising/v4/review-list')
     } else if (status2 === 'gathering-information') {

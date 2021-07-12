@@ -6,13 +6,34 @@
 
 
 {% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
+<a href="claimant-case-detail" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-one-quarter">
+    
+      <div class="pane__body width-container">
+        <div class="pane__subnav">
+          <nav class="subnav">
+              <ul class="subnav__section">
+                <h4 class="govuk-heading-s">What you can do next</h4>
+                <li class="subnav__section-item">
+                  <a href="#" class="subnav__link govuk-link govuk-link--no-visited-state">Update referral status</a>
+                </li>
+    
+                <li class="subnav__section-item">
+                  <a href="#" class="subnav__link govuk-link govuk-link--no-visited-state">Move referral to another caseload</a>
+                </li>
+                
+              </ul>
+            </nav>
+          </div>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
 
       <div class="govuk-tabs" data-module="govuk-tabs">
         <h2 class="govuk-tabs__title">
@@ -36,9 +57,8 @@
           </li>
         </ul>
         <div class="govuk-tabs__panel" id="referral-detail">
-          <h2 class="govuk-heading-m">Referral detail</h2>
 
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Referral date
@@ -105,65 +125,8 @@
               </dd>
             </div>
           </dl>
-
-          <h3 class="govuk-heading-m">Healthcare professional details</h3>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Name
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Mr B Test
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> HCP name</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Job title
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Consultant Rheumatologist
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> Job title</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                GP address
-              </dt>
-              <dd class="govuk-summary-list__value">
-                1 Test Hospital<br/>Test City<br/>XX11 1XX
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> HCP address</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Contact details
-              </dt>
-              <dd class="govuk-summary-list__value">
-                09000 000000<br/>
-                test.hospital@example.com
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
-                </a>
-              </dd>
-            </div>
-          </dl>
-      
         </div>
+
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="appointments">
           <h2 class="govuk-heading-m">Appointment info here</h2>
       

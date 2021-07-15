@@ -635,6 +635,37 @@ router.post('/finding-and-organising/v4/unassigned-list', function (req, res) {
   }
 })
 
+  // Status Iteration
+  router.post('/status-iteration/v1/status-filter2', function (req, res) {
+  
+    const status2 = req.session.data['status2']
+    req.session.data['status2']=''
+  
+    if (status2 === 'list-1') {
+      res.redirect('/status-iteration/v1/list-1')
+    } else if (status2 === 'list-2') {
+        res.redirect('/status-iteration/v1/list-2')
+    } else if (status2 === 'list-3') {
+      res.redirect('/status-iteration/v1/list-3')
+    } else if (status2 === 'assigned') {
+      res.redirect('/status-iteration/v1/assigned-list')
+    } else if (status2 === 'in-review') {
+      res.redirect('/status-iteration/v1/review-list')
+    } else if (status2 === 'gathering-information') {
+      res.redirect('/status-iteration/v1/information-list')
+    } else if (status2 === 'awaiting-evidence') {
+      res.redirect('/status-iteration/v1/evidence-list')
+    } else if (status2 === 'paper-based-review') {
+      res.redirect('/status-iteration/v1/paperbased-list')
+    } else if (status2 === 'assessment-booked') {
+      res.redirect('/status-iteration/v1/assessment-list')
+    } else if (status2 === 'awaiting-decision') {
+      res.redirect('/status-iteration/v1/decision-list')
+    } else {
+      res.redirect('/status-iteration/v1/error')
+    }
+  })
+
 //Branching bluesky
 
 //V1
@@ -953,6 +984,39 @@ router.post('/claimant-case/v3/status-filter2', function (req, res) {
     res.redirect('/claimant-case/v3/decision-list')
   } else {
     res.redirect('/claimant-case/v3/error')
+  }
+})
+
+//V4
+router.post('/claimant-case/v4/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/claimant-case/v4/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/claimant-case/v4/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/claimant-case/v4/list-3')
+  } else if (status2 === 'list-4') {
+    res.redirect('/claimant-case/v4/list-4')
+  } else if (status2 === 'unassigned') {
+    res.redirect('/claimant-case/v4/unassigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/claimant-case/v4/review-list')
+  } else if (status2 === 'gathering-information') {
+    res.redirect('/claimant-case/v4/information-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/claimant-case/v4/evidence-list')
+  } else if (status2 === 'paper-based-review') {
+    res.redirect('/claimant-case/v4/paperbased-list')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/claimant-case/v4/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/claimant-case/v4/decision-list')
+  } else {
+    res.redirect('/claimant-case/v4/error')
   }
 })
 

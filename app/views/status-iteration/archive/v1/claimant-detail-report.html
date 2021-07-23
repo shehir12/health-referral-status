@@ -1,4 +1,4 @@
-{% extends "layout-key-details-review.html" %}
+{% extends "layout-key-details-decision.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -6,7 +6,7 @@
 
 
 {% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
+<a href="start" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
             Preferred name
           </dt>
           <dd class="govuk-summary-list__value">
-            None
+            Sam
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -75,7 +75,7 @@
             Benefit type
           </dt>
           <dd class="govuk-summary-list__value">
-            UC
+            PIP
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -102,10 +102,6 @@
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Referral sub-status
-        </h2>
-        <p>Awaiting contact from claimant</p>
-        <h2 class="govuk-heading-m" id="subsection-title">
           What you can do next
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
@@ -114,7 +110,10 @@
               <a href="update-status">Update status</a>
             </li>
             <li>
-              <a href="#">Move to another caseload</a>
+              <a href="https://health-core-components.herokuapp.com/form_components/report_full_assessment">View referral report</a>
+            </li>
+            <li>
+              <a href="#">Move referral to another caseload</a>
             </li>
           </ul>
         </nav>

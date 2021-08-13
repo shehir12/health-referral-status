@@ -936,6 +936,36 @@ router.post('/status-iteration/bluesky/v3/status-filter2', function (req, res) {
   }
 })
 
+router.post('/status-iteration/bluesky/v4/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/status-iteration/bluesky/v4/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/status-iteration/bluesky/v4/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/status-iteration/bluesky/v4/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/status-iteration/bluesky/v4/assigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/status-iteration/bluesky/v4/review-list')
+  } else if (status2 === 'gathering-information') {
+    res.redirect('/status-iteration/bluesky/v4/information-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/status-iteration/bluesky/v4/evidence-list')
+  } else if (status2 === 'paper-based-review') {
+    res.redirect('/status-iteration/bluesky/v4/paperbased-list')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/status-iteration/bluesky/v4/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/status-iteration/bluesky/v4/decision-list')
+  } else {
+    res.redirect('/status-iteration/bluesky/v4/error')
+  }
+})
+
 //Branching Claimant Case
 
 //V1

@@ -951,13 +951,9 @@ router.post('/status-iteration/bluesky/v4/status-filter2', function (req, res) {
     res.redirect('/status-iteration/bluesky/v4/assigned-list')
   } else if (status2 === 'in-review') {
     res.redirect('/status-iteration/bluesky/v4/review-list')
-  } else if (status2 === 'gathering-information') {
-    res.redirect('/status-iteration/bluesky/v4/information-list')
   } else if (status2 === 'awaiting-evidence') {
     res.redirect('/status-iteration/bluesky/v4/evidence-list')
-  } else if (status2 === 'paper-based-review') {
-    res.redirect('/status-iteration/bluesky/v4/paperbased-list')
-  } else if (status2 === 'assessment-booked') {
+  } else if (status2 === 'assessment-ready') {
     res.redirect('/status-iteration/bluesky/v4/assessment-list')
   } else if (status2 === 'awaiting-decision') {
     res.redirect('/status-iteration/bluesky/v4/decision-list')

@@ -962,6 +962,32 @@ router.post('/status-iteration/bluesky/v4/status-filter2', function (req, res) {
   }
 })
 
+router.post('/status-iteration/bluesky/v5/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/status-iteration/bluesky/v5/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/status-iteration/bluesky/v5/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/status-iteration/bluesky/v5/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/status-iteration/bluesky/v5/assigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/status-iteration/bluesky/v5/review-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/status-iteration/bluesky/v5/evidence-list')
+  } else if (status2 === 'assessment-ready') {
+    res.redirect('/status-iteration/bluesky/v5/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/status-iteration/bluesky/v5/decision-list')
+  } else {
+    res.redirect('/status-iteration/bluesky/v5/error')
+  }
+})
+
 //Branching Claimant Case
 
 //V1
